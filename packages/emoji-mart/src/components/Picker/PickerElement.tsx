@@ -9,8 +9,8 @@ import PickerProps from './PickerProps'
 export default class PickerElement extends ShadowElement {
   static Props = PickerProps
 
-  constructor(props) {
-    super(props, { styles: PickerStyles })
+  constructor(props: Props) {
+    super(props, { styles: { ...PickerStyles, ...props.styles } })
   }
 
   async connectedCallback() {
